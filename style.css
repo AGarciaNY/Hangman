@@ -12,6 +12,10 @@ body {
   font-size:5em;
   letter-spacing:0.25em
 }
+.word {
+  font-size:5em;
+  letter-spacing:0.25em
+}
 
 #newgame {
   display:none;
