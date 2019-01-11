@@ -7,7 +7,7 @@
 var secretWord = null;
 var correctGuesses = [];
 var wrongGuesses = [];
-var image = ["images/Hangman-0.png", "images/Hangman-1.png", "images/Hangman-2.png", "images/Hangman-3.png", "images/Hangman-4.png", "images/Hangman-5.png", "images/Hangman-6.png"]
+var image = ["images/Hangman-0.png", "images/Hangman-1.png", "images/Hangman-2.png", "images/Hangman-3.png", "images/Hangman-4.png", "images/Hangman-5.png", "images/Hangman-6.png"];
 
 var gameOver= false;
 
@@ -17,8 +17,11 @@ var gameOver= false;
 // set wrongGuesses to an empty array
 // call the drawWord() function
 // call the drawHangman() function
+// "H","I"," ","M","S",".","S","I","N","C","K","L","E","R"
+// "H","I"," ","A","L","H","A","M","Z","A"
 function prepareGame() {
-  secretWord = ['J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T'];
+  secretWord = ["H","I"," ","M","S",".","S","I","N","C","K","L","E","R"
+  ];
   correctGuesses = [];
   wrongGuesses = [];
   drawWord();
@@ -75,7 +78,7 @@ function checkIfLost() {
 // 3. if the checkIfWon() is returns true call the onWin() function 
 function onCorrectGuess(letter) {
   correctGuesses.push(letter);
-  drawWord()
+  drawWord();
   if (checkIfWon() === true) {
     onWin();
   }
@@ -130,8 +133,8 @@ function drawWord() {
 // 2. change the src of the img tag with the id hangman 
 //    to the correct image url based on the number of misses
 function drawHangman() {
-  var misses = wrongGuesses.length
-  $("#hangman").attr("src", image[misses])
+  var misses = wrongGuesses.length;
+  $("#hangman").attr("src", image[misses]);
 }
 
 // in the onKeyDown function below
@@ -143,7 +146,7 @@ function onKeyDown(event) {
 
   if (gameOver===false){
     var letter = String.fromCharCode(event.keyCode);
-  letter = letter.toUpperCase()
+  letter = letter.toUpperCase();
   judgeGuess(letter);
   }
 }
@@ -153,5 +156,5 @@ function onKeyDown(event) {
 //       (Keydown function should take onKeyDown function as an argument)
 $(document).ready(function() {
   prepareGame();
-  $(document).keypress(onKeyDown)
-})
+  $(document).keypress(onKeyDown);
+});
