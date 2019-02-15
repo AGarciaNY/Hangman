@@ -20,8 +20,7 @@ var gameOver= false;
 // "H","I"," ","M","S",".","S","I","N","C","K","L","E","R"
 // "H","I"," ","A","L","H","A","M","Z","A"
 function prepareGame() {
-  secretWord = ["H","I"," ","M","S",".","S","I","N","C","K","L","E","R"
-  ];
+  secretWord = ["H","I"," ","P","A"];
   correctGuesses = [];
   wrongGuesses = [];
   drawWord();
