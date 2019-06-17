@@ -8,9 +8,9 @@ var secretWord = null;
 var correctGuesses = [];
 var wrongGuesses = [];
 var image = ["images/Hangman-0.png", "images/Hangman-1.png", "images/Hangman-2.png", "images/Hangman-3.png", "images/Hangman-4.png", "images/Hangman-5.png", "images/Hangman-6.png"];
-
+var test=""
 var gameOver= false;
-
+var wor
 
 // in the prepareGame() function below
 // set correctGuesses to an empty array
@@ -19,8 +19,11 @@ var gameOver= false;
 // call the drawHangman() function
 // "H","I"," ","M","S",".","S","I","N","C","K","L","E","R"
 // "H","I"," ","A","L","H","A","M","Z","A"
+// "C","A","N"," ","I"," ","H","A","V","E"," ","I","C","E"," ","C","R","E","A","M"
 function prepareGame() {
-  secretWord = ["H","I"," ","P","A"];
+  test="GIVE ME SOME ICE CREAM";
+  var word=test.split("");
+  secretWord = word;
   correctGuesses = [];
   wrongGuesses = [];
   drawWord();
